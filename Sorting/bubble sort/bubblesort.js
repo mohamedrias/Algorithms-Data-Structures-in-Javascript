@@ -1,7 +1,7 @@
 (function () {
     "use strict";
     var array;
-    
+
     /**
      * Array Shuffler
      * @param   {Array} array Array to be shuffled
@@ -32,9 +32,7 @@
         return shuffleArray(array);
     }
 
-    array = randomNumberGenerator(1000);
 
-    
     /**
      * Swaps to elements in an array
      * @param {Array}  array Array in which need to swap
@@ -66,8 +64,11 @@
         return array;
     }
 
-    console.log("Bubble sort : ", bubbleSort(array));
+    array = randomNumberGenerator(1000);
 
+    console.time("BubbleSort");
+    console.log("Bubble sort : ", bubbleSort(array));
+    console.timeEnd("BubbleSort");
 
     array = randomNumberGenerator(1000);
 
