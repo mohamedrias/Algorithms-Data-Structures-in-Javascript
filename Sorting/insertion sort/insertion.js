@@ -63,6 +63,8 @@
                 temp = array[i];
                 // initializing j which is one value less than i
                 j = i - 1;
+                // Looping through the sorted array to find out where to insert the current item
+                // The momemt: sorted array items becomes less than current item, insert the current item in that index
                 for (; j >= 0 && (array[j] > temp); j--) {
                     array[j + 1] = array[j];
                 }
