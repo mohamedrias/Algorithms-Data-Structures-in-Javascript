@@ -63,9 +63,10 @@
                 temp = array[i];
                 // initializing j which is one value less than i
                 j = i - 1;
-                for (; j >= 0 && (array[j] > array[j + 1]); j--) {
-                    swap(array, j, j + 1);
+                for (; j >= 0 && (array[j] > temp); j--) {
+                    array[j + 1] = array[j];
                 }
+                array[j + 1] = temp;
             }
             return array;
         }
@@ -73,5 +74,7 @@
         console.time("InsertionSort");
         console.log(InsertionSort(array));
         console.timeEnd("InsertionSort");
+
+        console.log(InsertionSort([12, 11, 13, 5, 6]));
 
     })();
