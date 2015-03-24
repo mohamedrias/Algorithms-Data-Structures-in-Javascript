@@ -75,5 +75,6 @@
         console.log(SelectionSort(array));
         console.timeEnd("SelectionSort");
 
+        //TODO: Add more comments
 
     })();
